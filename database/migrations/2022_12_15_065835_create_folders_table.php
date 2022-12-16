@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedbiginteger('user_id');
             $table->string('title');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });
     }
 

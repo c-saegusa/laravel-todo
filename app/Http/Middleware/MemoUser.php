@@ -19,8 +19,6 @@ class MemoUser
         /** @var User $user */
         $auth = auth()->user()->id;
    
-
-   
         if (!empty($request->folder)) {
             $folder_user = $request->folder->user_id;
             if ($folder_user !== $auth) {

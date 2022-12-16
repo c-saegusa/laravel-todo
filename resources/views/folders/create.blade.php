@@ -7,12 +7,15 @@
                     <nav class="panel panel-default">
                         <div class="panel-heading">フォルダを追加する</div>
                         <div class="panel-body">
-                            @if($errors->has('title'))<div class="alert alert-danger">{{ $errors->first('title') }}</div>@endif
+                            @if ($errors->has('title'))
+                                <div class="alert alert-danger">{{ $errors->first('titleƒƒ') }}</div>
+                            @endif
                             <form action="{{ route('folders.store') }}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <label for="title">フォルダ名</label>
-                                    <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}">
+                                    <input type="text" class="form-control" name="title" id="title"
+                                        value="{{ old('title') }}">
                                 </div>
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary">送信</button>
